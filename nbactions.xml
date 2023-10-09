@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath net.rhizomik.rhizomer.RhizomerAPIApplication</exec.args>
+                <exec.executable>java</exec.executable>
+                <Env.SPRING_PROFILES_ACTIVE>console-log,local,eureka,jpa,service,zero</Env.SPRING_PROFILES_ACTIVE>
+                <Env.SPRING_APPLICATION_NAME>rhizomer</Env.SPRING_APPLICATION_NAME>
+                <Env.ALLOWED-ORIGINS>http://localhost:4200</Env.ALLOWED-ORIGINS>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,suspend=n,address=${jpda.address} -classpath %classpath net.rhizomik.rhizomer.RhizomerAPIApplication</exec.args>
+                <exec.executable>java</exec.executable>
+                <jpda.listen>true</jpda.listen>
+                <Env.SPRING_PROFILES_ACTIVE>console-log,local,eureka,jpa,service,zero</Env.SPRING_PROFILES_ACTIVE>
+                <Env.SPRING_APPLICATION_NAME>rhizomer</Env.SPRING_APPLICATION_NAME>
+                <Env.ALLOWED-ORIGINS>http://localhost:4200</Env.ALLOWED-ORIGINS>
+            </properties>
+        </action>
+    </actions>

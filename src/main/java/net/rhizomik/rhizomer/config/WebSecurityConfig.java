@@ -24,6 +24,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Value("${allowed-origins}")
     String[] allowedOrigins;
+    @Value("${spring.application.name}")
+    String applicationName;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -59,6 +61,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
+        
+        for (String allowed: allowedOrigins) {
+            System.out.println("allowedOrigins:"+allowed);
+        }
+        
+        System.out.println("application:"+applicationName);
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowedOrigins(Arrays.asList(allowedOrigins));
         corsConfiguration
