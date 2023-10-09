@@ -6,6 +6,7 @@
     <groupId>net.rhizomik</groupId>
     <artifactId>rhizomerAPI</artifactId>
     <packaging>jar</packaging>
+    <version>0.2.2-SNAPSHOT</version>
 
     <name>rhizomerAPI</name>
     <description>Rhizomer API</description>
@@ -20,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <project.version>0.2.1</project.version>
+        <project.version>0.2.2-SNAPSHOT</project.version>
         <application.name>rhizomerAPI</application.name>
         <docker-maven-plugin.version>0.34.1</docker-maven-plugin.version>
         <image.name.prefix>nageru</image.name.prefix>
