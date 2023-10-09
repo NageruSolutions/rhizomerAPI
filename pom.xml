@@ -153,7 +153,7 @@
                         <image>
                             <name>${image.name.prefix}/${application.name}:${project.version}</name>
                             <build>
-                                <from>openjdk:11-jre-slim</from>
+                                <from>${image.name.prefix}/ah-graalvm:${graalvm-image.version}</from>
                                 <entryPoint>
                                     <shell>${container.shell.command} /app/${application.name}-${project.version}.jar</shell>
                                 </entryPoint>
