@@ -153,7 +153,18 @@
                     </execution>
                 </executions>
             </plugin>
-            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>net.rhizomik.rhizomer.RhizomerAPIApplication</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>            
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
