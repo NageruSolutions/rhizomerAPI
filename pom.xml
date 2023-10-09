@@ -180,6 +180,19 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version> 
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>net.rhizomik.rhizomer.RhizomerAPIApplication</mainClass> 
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>            
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.5.1</version>
                 <executions>
@@ -192,7 +205,7 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>net.rhizomik.rhizomer.RhizomerAPIApplication</mainClass> <!-- Replace with your main class -->
+                                    <mainClass>net.rhizomik.rhizomer.RhizomerAPIApplication</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
