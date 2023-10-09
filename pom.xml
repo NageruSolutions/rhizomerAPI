@@ -25,7 +25,7 @@
         <docker-maven-plugin.version>0.34.1</docker-maven-plugin.version>
         <image.name.prefix>nageru</image.name.prefix>
         <registry>ghcr.io</registry>        		
-        <project.version>1.6.4-SNAPSHOT</project.version>
+        <project.version>0.2.1</project.version>
         <container.shell.command>java ${JDK_JAVA_OPTIONS} -noverify -XX:+AlwaysPreTouch -jar</container.shell.command>                                                                    </properties>
 
     <dependencies>
