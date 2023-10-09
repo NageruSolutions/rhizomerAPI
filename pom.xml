@@ -5,7 +5,6 @@
 
     <groupId>net.rhizomik</groupId>
     <artifactId>rhizomerAPI</artifactId>
-    <version>0.2.1</version>
     <packaging>jar</packaging>
 
     <name>rhizomerAPI</name>
@@ -21,11 +20,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <application.name>rhizomer</application.name>
+        <project.version>0.2.1</project.version>
+        <application.name>rhizomerAPI</application.name>
         <docker-maven-plugin.version>0.34.1</docker-maven-plugin.version>
         <image.name.prefix>nageru</image.name.prefix>
         <registry>ghcr.io</registry>        		
-        <project.version>0.2.1</project.version>
         <container.shell.command>java ${JDK_JAVA_OPTIONS} -noverify -XX:+AlwaysPreTouch -jar</container.shell.command>                                                                    </properties>
 
     <dependencies>
