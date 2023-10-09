@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.rhizomik</groupId>
-    <artifactId>rhizomerAPI</artifactId>
+    <artifactId>rhizomer</artifactId>
     <packaging>jar</packaging>
     <version>0.2.2-SNAPSHOT</version>
 
@@ -22,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
         <project.version>0.2.2-SNAPSHOT</project.version>
-        <application.name>rhizomerAPI</application.name>
+        <application.name>rhizomer</application.name>
         <docker-maven-plugin.version>0.34.1</docker-maven-plugin.version>
         <image.name.prefix>nageru</image.name.prefix>
         <registry>ghcr.io</registry>        		
